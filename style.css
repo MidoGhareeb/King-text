@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Changa:wght@200..800&family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Changa", sans-serif;
+}
+body{
+    height: 100%;
+    background: linear-gradient(to right, #5D4037 50%, #fff 50%)fixed;
+}
+.container{
+    background-color: #fff;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    box-shadow: 15px 30px 35px rgb(0 , 0 , 0 ,0.1);
+    border-radius: 10px;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+.stats{
+    text-align: right;
+    color: #5D4037;
+    font-weight: 500;
+    line-height: 50px;
+    font-size: 30px;
+}
+.coin{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.coin img{
+    width: 145px;
+
+}
+.head , .tail{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.tail{
+    transform: rotateX(180deg);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+button{
+    padding: 18px 0px;
+    width: 120px;
+    border: 2.5px solid #5D4037;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+}
+#flip-coin{
+    color: #fff;
+    background-color: #5D4037;
+}
+#reset-coin{
+    background-color: #fff;
+    color: #5D4037;
+}
+#flip-coin:disabled{
+    color: #fff;
+    background-color: #757575;
+    border-color:#5D4037;
+    color: #ffffff;
+}
+@keyframes spin-tail {
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+    
+}
+@keyframes spin-head {
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+    
+}
+
+
+
